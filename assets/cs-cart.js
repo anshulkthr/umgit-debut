@@ -152,14 +152,14 @@ class CartItems extends HTMLElement {
       
         publish(PUB_SUB_EVENTS.cartUpdate, { source: 'cart-items', cartData: parsedState, variantId: variantId });
       });
-      // .catch(() => {
-      //   this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
-      //   const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
-      //   errors.textContent = window.cartStrings.error;
-      // })
-      // .finally(() => {
-      //   this.disableLoading(line);
-      // });
+      .catch(() => {
+        this.querySelectorAll('.loading__spinner').forEach((overlay) => overlay.classList.add('hidden'));
+        const errors = document.getElementById('cart-errors') || document.getElementById('CartDrawer-CartErrors');
+        errors.textContent = window.cartStrings.error;
+      })
+      .finally(() => {
+        this.disableLoading(line);
+      });
   }
 
   updateLiveRegions(line, message) {
