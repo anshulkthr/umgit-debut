@@ -194,6 +194,7 @@ cart-drawer-items {
 
 .cart-item__details a {
   border: none;
+  font-size: 1em;
 }
 
 .cart-items *.right {
