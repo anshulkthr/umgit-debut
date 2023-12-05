@@ -6783,7 +6783,7 @@ theme.Product = (function() {
         dataType: 'json'
       };
 
-      this.form = this.querySelector('form');
+      this.form = document.querySelector('form');
       this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
       if (this.cart) {
           formData.append(
