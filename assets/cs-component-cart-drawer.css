@@ -348,6 +348,10 @@ cart-remove-button {
 
 .cart-drawer .cart__checkout-button {
   max-width: none;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  font-weight: 600;
 }
 
 .drawer__footer .cart__dynamic-checkout-buttons {
