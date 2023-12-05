@@ -6783,6 +6783,17 @@ theme.Product = (function() {
         dataType: 'json'
       };
 
+      this.form = this.querySelector('form');
+      this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+      if (this.cart) {
+          formData.append(
+            'sections',
+            this.cart.getSectionsToRender().map((section) => section.id)
+          );
+          formData.append('sections_url', window.location.pathname);
+          this.cart.setActiveElement(document.activeElement);
+        }
+      
       $.post(params)
         .done(
           function(item) {
