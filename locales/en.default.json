@@ -13,6 +13,7 @@
       "unit_price_separator": "per",
       "error": "Error"
     },
+    "continue_shopping": "Continue shopping",
     "meta": {
       "tags": "Tagged \"{{ tags }}\"",
       "page": "Page {{ page }}"
@@ -35,7 +36,7 @@
       "login_form_submit": "Enter",
       "signup_form_email_label": "Email",
       "signup_form_success": "We will send you an email right before we open!",
-      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"text-link\">Log in here</a>",
+      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"text-link\">Log in here<\/a>",
       "password_link": "Enter using password"
     },
     "social": {
@@ -92,7 +93,7 @@
     }
   },
   "sections": {
-    "header":{
+    "header": {
       "announcement_bar_label": "Announcement"
     },
     "slideshow": {
@@ -101,7 +102,7 @@
       "pause_slideshow": "Pause slideshow",
       "rotate_slideshow": "Play slideshow",
       "load_slide": "Load slide {{ slide_number }}",
-      "navigation_instructions": "Use left/right arrows to navigate the slideshow or swipe left/right if using a mobile device"
+      "navigation_instructions": "Use left\/right arrows to navigate the slideshow or swipe left\/right if using a mobile device"
     },
     "featured_product": {
       "title": "Featured product",
@@ -112,7 +113,7 @@
     "map": {
       "address_error": "Error looking up that address",
       "address_no_results": "No results for that address",
-      "address_query_limit_html": "You have exceeded the Google API usage limit. Consider upgrading to a <a href=\"https://developers.google.com/maps/premium/usage-limits\">Premium Plan</a>.",
+      "address_query_limit_html": "You have exceeded the Google API usage limit. Consider upgrading to a <a href=\"https:\/\/developers.google.com\/maps\/premium\/usage-limits\">Premium Plan<\/a>.",
       "auth_error_html": "There was a problem authenticating your Google Maps account.",
       "section_heading": "Location"
     },
@@ -122,6 +123,82 @@
       "resume": "Resume {{ video_title }} video",
       "close": "Close {{ video_title }} video"
     }
+  },
+  "cart": {
+    "general": {
+      "title": "Your cart",
+      "note": "Add a note to your order",
+      "removed_item_html": "Removed <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}<\/span> from your cart.",
+      "remove": "Remove",
+      "estimated_total": "Estimated total",
+      "new_estimated_total": "New estimated total",
+      "remove_title": "Remove {{ title }}",
+      "subtotal": "Subtotal",
+      "savings": "You're saving",
+      "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "update": "Update",
+      "checkout": "Check out",
+      "empty": "Your cart is currently empty.",
+      "cookies_required": "Enable cookies to use the shopping cart",
+      "continue_shopping": "Continue shopping",
+      "cart_error": "There was an error while updating your cart. Please try again.",
+      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart."
+    },
+    "login": {
+      "title": "Have an account?",
+      "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
+    },
+    "headings": {
+      "product": "Product",
+      "price": "Price",
+      "total": "Total",
+      "quantity": "Quantity",
+      "image": "Product image"
+    },
+    "label": {
+      "discounted_total": "Discounted total",
+      "product": "Product",
+      "price": "Price",
+      "price_column": "See Price column for discount details.",
+      "product_details": "Product details",
+      "quantity": "Quantity",
+      "qty": "Qty",
+      "regular_total": "Regular total",
+      "remove": "Remove {{ product }}",
+      "total": "Total",
+      "update": "Update"
+    },
+    "popup": {
+      "added_to_cart": "Just added to your cart",
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      },
+      "product_details": "Product details",
+      "quantity": "Qty",
+      "quantity_label": "Quantity: {{ quantity_count }}"
+    }
+  },
+  "accessibility": {
+    "skip_to_text": "Skip to content",
+    "skip_to_product_info": "Skip to product information",
+    "close": "Close",
+    "unit_price_separator": "per",
+    "vendor": "Vendor:",
+    "error": "Error",
+    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "link_messages": {
+      "new_window": "Opens in a new window.",
+      "external": "Opens external website."
+    },
+    "loading": "Loading...",
+    "total_reviews": "total reviews",
+    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
+    "collapsible_content_title": "Collapsible content",
+    "complementary_products": "Complementary products"
   },
   "blogs": {
     "article": {
@@ -154,53 +231,6 @@
         "one": "{{ count }} comment",
         "other": "{{ count }} comments"
       }
-    }
-  },
-  "cart": {
-    "general": {
-      "title": "Your cart",
-      "note": "Add a note to your order",
-      "removed_item_html": "Removed <span class=\"cart__removed-product-details\">({{ quantity }}) {{ link }}</span> from your cart.",
-      "remove": "Remove",
-      "subtotal": "Subtotal",
-      "savings": "You're saving",
-      "taxes_and_shipping_at_checkout":
-        "Taxes and shipping calculated at checkout",
-      "taxes_and_shipping_policy_at_checkout_html":
-        "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
-      "taxes_included_but_shipping_at_checkout":
-        "Tax included and shipping calculated at checkout",
-      "taxes_included_and_shipping_policy_html":
-        "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
-      "update": "Update",
-      "checkout": "Check out",
-      "empty": "Your cart is currently empty.",
-      "cookies_required": "Enable cookies to use the shopping cart",
-      "continue_shopping": "Continue shopping",
-      "cart_error": "There was an error while updating your cart. Please try again."
-    },
-    "label": {
-      "discounted_total": "Discounted total",
-      "product": "Product",
-      "price": "Price",
-      "price_column": "See Price column for discount details.",
-      "product_details": "Product details",
-      "quantity": "Quantity",
-      "qty": "Qty",
-      "regular_total": "Regular total",
-      "remove": "Remove {{ product }}",
-      "total": "Total",
-      "update": "Update"
-    },
-    "popup": {
-      "added_to_cart": "Just added to your cart",
-      "cart_count": {
-        "one": "{{ count }} item",
-        "other": "{{ count }} items"
-      },
-      "product_details": "Product details",
-      "quantity": "Qty",
-      "quantity_label": "Quantity: {{ quantity_count }}"
     }
   },
   "collections": {
@@ -262,9 +292,9 @@
       "address1": "Address",
       "address2": "Apartment, suite, etc.",
       "city": "City",
-      "country": "Country/Region",
+      "country": "Country\/Region",
       "province": "Province",
-      "zip": "Postal/Zip Code",
+      "zip": "Postal\/Zip Code",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add Address",
@@ -385,19 +415,50 @@
       "on_sale": "Sale",
       "from_lowest_price_html": "from {{ lowest_price }}",
       "sale_price": "Sale price",
-      "quantity": "Quantity",
+      "quantity": {
+        "label": "Quantity",
+        "input_label": "Quantity for {{ product }}",
+        "increase": "Increase quantity for {{ product }}",
+        "decrease": "Decrease quantity for {{ product }}",
+        "minimum_of": "Minimum of {{ quantity }}",
+        "maximum_of": "Maximum of {{ quantity }}",
+        "multiples_of": "Increments of {{ quantity }}",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> in cart",
+        "note": "View quantity rules"
+      },
       "add_to_cart": "Add to cart",
       "loader_label": "Adding product to your cart",
       "back_to_collection": "Back to {{ title }}",
       "vendor": "Vendor",
       "quantity_minimum_message": "Quantity must be 1 or more",
       "include_taxes": "Tax included.",
-      "shipping_policy_html":
-      "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
       "unit_price_label": "Unit price",
       "view_cart": "View cart",
       "view_in_space": "View in your space",
-      "view_in_space_label": "View in your space, loads item in augmented reality window"
+      "view_in_space_label": "View in your space, loads item in augmented reality window",
+      "price": {
+        "from_price_html": "From {{ price }}",
+        "regular_price": "Regular price",
+        "sale_price": "Sale price",
+        "unit_price": "Unit price"
+      },
+      "volume_pricing": {
+        "title": "Volume Pricing",
+        "note": "Volume pricing available",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "at {{ price }}\/ea",
+        "price_range": "{{ minimum }} - {{ maximum }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "View store information",
+        "check_other_stores": "Check availability at other stores",
+        "pick_up_available": "Pickup available",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "unavailable": "Couldn't load pickup availability",
+        "refresh": "Refresh"
+      }
     }
   },
   "gift_cards": {
