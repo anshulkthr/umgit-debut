@@ -277,7 +277,7 @@ cart-remove-button {
 .cart-drawer .cart-items td {
   border: none;
   padding-top: 2rem;
-  max-heigt: 110px;
+  max-height: 110px;
 }
 
 .cart-drawer .cart-item > td + td {
