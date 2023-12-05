@@ -6787,6 +6787,8 @@ theme.Product = (function() {
       this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
 
       const formData = new FormData(this.form);
+
+      console.log(this.cart);
       if (this.cart) {
           formData.append(
             'sections',
