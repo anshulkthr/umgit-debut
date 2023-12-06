@@ -6799,19 +6799,20 @@ theme.Product = (function() {
       config.body = formData;
       var params = {
         url: '/cart/add.js',
-        data: $(config).serialize(),
+        data: config,
         dataType: 'json'
       };
       
       $.post(params)
         .done(
           function(item) {
-            this._hideErrorMessage();
-            this._setupCartPopup(item);
+            const response = item.json();
+            // this._hideErrorMessage();
+            // this._setupCartPopup(item);
 
             // item.sections = this.cart.getSectionsToRender().map((section) => section.id));
             // item.sections_url = window.location.pathname;
-            console.log('item is', item);
+            console.log('item is', response);
             //this.cart.renderContents(item);
           }.bind(this)
         )
