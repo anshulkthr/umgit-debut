@@ -6811,9 +6811,9 @@ theme.Product = (function() {
             this._hideErrorMessage();
             this._setupCartPopup(item);
 
-            item.sections = this.cart.getSectionsToRender().map((section) => section.id));
-            item.sections_url = window.location.pathname;
-            console.log('item is', item);
+            // item.sections = this.cart.getSectionsToRender().map((section) => section.id));
+            // item.sections_url = window.location.pathname;
+            // console.log('item is', item);
             //this.cart.renderContents(item);
           }.bind(this)
         )
