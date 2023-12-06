@@ -6803,7 +6803,8 @@ theme.Product = (function() {
           function(item) {
             this._hideErrorMessage();
             this._setupCartPopup(item);
-            this.cart.renderContents(item);
+            console.log('item is', item);
+            //this.cart.renderContents(item);
           }.bind(this)
         )
         .fail(
