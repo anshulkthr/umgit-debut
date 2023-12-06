@@ -6796,7 +6796,7 @@ theme.Product = (function() {
         formData.append('sections_url', window.location.pathname);
         this.cart.setActiveElement(document.activeElement);
       }
-      console.log('data is', data);
+      console.log('data is', data.body);
       var params = {
         url: '/cart/add.js',
         data: $(data).serialize(),
