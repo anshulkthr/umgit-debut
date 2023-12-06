@@ -6799,7 +6799,7 @@ theme.Product = (function() {
       config.body = formData;
       var params = {
         url: '/cart/add.js',
-        data: config,
+        data: $(config).serialize(),
         dataType: 'json'
       };
       
