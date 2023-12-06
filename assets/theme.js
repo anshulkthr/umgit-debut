@@ -6777,43 +6777,17 @@ theme.Product = (function() {
     },
 
     _addItemToCart: function(data) {
-      
-
-      this.form = document.querySelector('form');
-      this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-
-      const config = fetchConfig('javascript');
-      config.headers['X-Requested-With'] = 'XMLHttpRequest';
-      delete config.headers['Content-Type'];
-      
-      const formData = new FormData(this.form);
-      
-      if (this.cart) {
-        formData.append(
-          'sections',
-          this.cart.getSectionsToRender().map((section) => section.id)
-        );
-        formData.append('sections_url', window.location.pathname);
-        this.cart.setActiveElement(document.activeElement);
-      }
-      config.body = formData;
       var params = {
         url: '/cart/add.js',
-        data: $(config).serialize(),
+        data: $(data).serialize(),
         dataType: 'json'
       };
       
       $.post(params)
         .done(
           function(item) {
-            const response = item.json();
-            // this._hideErrorMessage();
-            // this._setupCartPopup(item);
-
-            // item.sections = this.cart.getSectionsToRender().map((section) => section.id));
-            // item.sections_url = window.location.pathname;
-            console.log('item is', response);
-            //this.cart.renderContents(item);
+            this._hideErrorMessage();
+            this._setupCartPopup(item);
           }.bind(this)
         )
         .fail(
