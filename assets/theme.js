@@ -6737,7 +6737,7 @@ theme.Product = (function() {
             // request/cart popup is loading and handle loading state
             this._handleButtonLoadingState(true);
             var $data = $(this.selectors.productForm, this.$container);
-            this._addItemToCart($data);
+            // this._addItemToCart($data);
             return;
           }
         }.bind(this)
@@ -6782,7 +6782,7 @@ theme.Product = (function() {
         data: $(data).serialize(),
         dataType: 'json'
       };
-
+      
       $.post(params)
         .done(
           function(item) {

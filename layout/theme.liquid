@@ -106,6 +106,9 @@
   <script src="{{ 'lazysizes.js' | asset_url }}" async="async"></script>
   <script src="{{ 'vendor.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 
   {{ content_for_header }}
 </head>
@@ -114,9 +117,7 @@
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
-  {%- if settings.enable_ajax -%}
-    {% include 'cart-popup' %}
-  {%- endif -%}
+  {% section 'cart-drawer' %}
 
   {% section 'header' %}
 
@@ -138,5 +139,21 @@
     <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
     <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
   </ul>
+
+  <script>
+      window.shopUrl = '{{ request.origin }}';
+      window.routes = {
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}',
+      };
+
+      window.cartStrings = {
+        error: `{{ 'cart.general.cart_error' | t }}`,
+        quantityError: `{{ 'cart.general.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
+      };
+  </script>
 </body>
 </html>
