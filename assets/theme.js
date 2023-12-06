@@ -6810,6 +6810,12 @@ theme.Product = (function() {
           function(item) {
             this._hideErrorMessage();
             this._setupCartPopup(item);
+
+            item.append(
+              'sections',
+              this.cart.getSectionsToRender().map((section) => section.id)
+            );
+            item.append('sections_url', window.location.pathname);
             console.log('item is', item);
             //this.cart.renderContents(item);
           }.bind(this)
