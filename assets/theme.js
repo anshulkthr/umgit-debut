@@ -6777,26 +6777,31 @@ theme.Product = (function() {
     },
 
     _addItemToCart: function(data) {
+      
+
+      this.form = document.querySelector('form');
+      this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+
+      const config = fetchConfig('javascript');
+      config.headers['X-Requested-With'] = 'XMLHttpRequest';
+      delete config.headers['Content-Type'];
+      
+      const formData = new FormData(this.form);
+      
+      if (this.cart) {
+        formData.append(
+          'sections',
+          this.cart.getSectionsToRender().map((section) => section.id)
+        );
+        formData.append('sections_url', window.location.pathname);
+        this.cart.setActiveElement(document.activeElement);
+      }
+      console.log('data is', data);
       var params = {
         url: '/cart/add.js',
         data: $(data).serialize(),
         dataType: 'json'
       };
-
-      this.form = document.querySelector('form');
-      this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
-
-      const formData = new FormData(this.form);
-
-      console.log(this.cart);
-      if (this.cart) {
-          formData.append(
-            'sections',
-            this.cart.getSectionsToRender().map((section) => section.id)
-          );
-          formData.append('sections_url', window.location.pathname);
-          this.cart.setActiveElement(document.activeElement);
-        }
       
       $.post(params)
         .done(
