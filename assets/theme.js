@@ -6789,7 +6789,6 @@ theme.Product = (function() {
       const formData = new FormData(this.form);
       
       if (this.cart) {
-        data.sections = "abc";
         formData.append(
           'sections',
           this.cart.getSectionsToRender().map((section) => section.id)
@@ -6797,11 +6796,10 @@ theme.Product = (function() {
         formData.append('sections_url', window.location.pathname);
         this.cart.setActiveElement(document.activeElement);
       }
-      const ab = {...data, sections: 'abc'};
-      console.log('data is', ab);
+      config.body = formData;
       var params = {
         url: '/cart/add.js',
-        data: $(data).serialize(),
+        data: $(config).serialize(),
         dataType: 'json'
       };
       
@@ -6813,7 +6811,7 @@ theme.Product = (function() {
 
             // item.sections = this.cart.getSectionsToRender().map((section) => section.id));
             // item.sections_url = window.location.pathname;
-            // console.log('item is', item);
+            console.log('item is', item);
             //this.cart.renderContents(item);
           }.bind(this)
         )
